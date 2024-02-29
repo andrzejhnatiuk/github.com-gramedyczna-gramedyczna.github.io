@@ -1,5 +1,6 @@
 .button {
-    display: inline-block;
+    display: block;
+    margin: auto;
     border-radius: 4px;
     background-color: #f4511e;
     border: none;
@@ -15,7 +16,7 @@
   
   .button span {
     cursor: pointer;
-    display: inline-block;
+    display: block;
     position: relative;
     transition: 0.5s;
   }
