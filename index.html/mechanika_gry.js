@@ -1,89 +1,109 @@
-let list = [
-	['Nalokson', 'Opiat'],
-	['Beta-bloker', 'Glukagon'],
-	['Etanol', 'Metanol'],
-    ['Paracetamol', 'N-acetylocysteina'],
-	['Zolpidem', 'Flumazenil'],
-	['Izoniazyd', 'Pirydoksyna'],
-];
+const pairs = [
+    { word: 'Hot', opposite: 'Cold' },
+    { word: 'Big', opposite: 'Small' },
+    { word: 'Long', opposite: 'Short' }
+  ];
 
-function checkPair(a, b) {
-	return list.some(([a2, b2]) => (a2 == a && b2 == b) || (a2 == b && b2 == a));
-}
+  const gameBoard = document.getElementById('game-board');
+  const scoreDisplay = document.getElementById('score');
+  const mistakesDisplay = document.getElementById('mistakes');
+  const restartButton = document.getElementById('restartButton');
+  let firstCard = null;
+  let secondCard = null;
+  let score = 0;
+  let mistakes = 0;
 
-let match = ""; 
-let click = 0; 
-let count = 0; 
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
 
-function check() { 
-    if (count === 6) 
-        window.alert("Twój wynik to :" + click); 
-} 
-  
-// To shuffle the list 
-function shuffleList(List) { 
-    for (let i = List.length - 1; i > 0; i--) { 
-        let j = Math.floor(Math.random() * (i + 1)); 
-        let temp = List[i]; 
-        List[i] = List[j]; 
-        List[j] = temp; 
-    } 
-    return List; 
-} 
-  
-list = shuffleList(list);
-  
+  function createCard(word) {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.textContent = word;
+    card.addEventListener('click', () => flipCard(card, word));
+    gameBoard.appendChild(card);
+    return card;
+  }
 
+  function flipCard(card, word) {
+    if (!card.classList.contains('connected') && !card.classList.contains('incorrect')) {
+      if (!firstCard) {
+        firstCard = { element: card, word: word };
+        card.classList.add('connected');
+      } else if (!secondCard) {
+        secondCard = { element: card, word: word };
+        card.classList.add('connected');
+        checkMatch();
+      }
+    }
+  }
 
-// Toggle function to handle moves 
-let toggle = (text) => { 
-    click = click + 1; 
-    document.getElementById("count").innerText = 
-        "Liczba prób: " + click; 
-          
-    // Toogle class and update text visibility 
-    text.classList.toggle("active"); 
-    if (text.style.display === "block") { 
-        text.style.display = "none"; 
-        match = ""; 
-    } else if (text.style.display === "none") { 
-        text.style.display = "block"; 
-        if (match === "") match = text; 
-        else if (match.innerText === text.innerText) { 
-            text.style.display = "inline"; 
-            match.style.display = "inline"; 
-            count++; 
-            match = ""; 
-              
-            // Check and display result with .5 sec delay 
-            setTimeout(() => check(), 500); 
-        } else { 
-          
-            // Revert back changes if no match 
-            // found with delay 
-            setTimeout(() => { 
-                text.style.display = "none"; 
-                match.style.display = "none"; 
-                match = ""; 
-            }, 500); 
-        } 
-    } 
-}; 
-  
-// Create cards 
-function createCard(e) { 
-    const cardItem = document.createElement("div"); 
-    cardItem.classList.add("card-item"); 
-    const text = document.createElement("p"); 
-    text.innerText = e; 
-    text.style.display = "none"; 
-    cardItem.appendChild(text); 
-    text.style.display = "none"; 
-    cardItem.addEventListener("click", () => toggle(text)); 
-    const card = document.getElementById("card"); 
-    card.appendChild(cardItem); 
-} 
-  
-// Load all card items 
-list.map((e, i) => createCard(e, i)); 
+  function checkMatch() {
+    if (firstCard && secondCard) {
+      const pair1 = pairs.find(p => p.word === firstCard.word && p.opposite === secondCard.word);
+      const pair2 = pairs.find(p => p.word === secondCard.word && p.opposite === firstCard.word);
+      
+      if (pair1 || pair2) {
+        setTimeout(() => {
+          firstCard.element.style.backgroundColor = '#6ed56d';
+          secondCard.element.style.backgroundColor = '#6ed56d';
+          score++;
+          scoreDisplay.textContent = score;
+          firstCard = null;
+          secondCard = null;
+          checkWin();
+        }, 500);
+      } else {
+        setTimeout(() => {
+          firstCard.element.classList.remove('connected');
+          secondCard.element.classList.remove('connected');
+          firstCard.element.classList.add('incorrect');
+          secondCard.element.classList.add('incorrect');
+          setTimeout(() => {
+            firstCard.element.classList.remove('incorrect');
+            secondCard.element.classList.remove('incorrect');
+          }, 1000);
+          firstCard = null;
+          secondCard = null;
+          mistakes++;
+          mistakesDisplay.textContent = mistakes;
+        }, 500);
+      }
+    }
+  }
 
+  function checkWin() {
+    const allCards = document.querySelectorAll('.card');
+    const allConnected = [...allCards].every(card => card.classList.contains('connected'));
+    if (allConnected) {
+      alert('Gratulacje! Wygrałeś czekoladke, teraz możesz iść do sklepu i sobie ją kupić.');
+    }
+  }
+
+  function restartGame() {
+    gameBoard.innerHTML = '';
+    score = 0;
+    mistakes = 0;
+    scoreDisplay.textContent = score;
+    mistakesDisplay.textContent = mistakes;
+    initializeGame();
+  }
+
+  function initializeGame() {
+    const shuffledPairs = shuffle(pairs);
+    const uniquePairs = [...new Set(shuffledPairs)];
+    const doubledPairs = uniquePairs.flatMap(pair => [pair, { word: pair.opposite, opposite: pair.word }]);
+    const shuffledCards = shuffle(doubledPairs);
+    shuffledCards.forEach(pair => {
+      createCard(pair.word);
+    });
+  }
+
+  initializeGame();
+
+  restartButton.addEventListener('click', restartGame);

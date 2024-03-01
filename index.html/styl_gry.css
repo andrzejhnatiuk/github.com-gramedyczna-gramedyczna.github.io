@@ -1,68 +1,21 @@
-@import url( 
-"https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"); 
-  
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-} 
-  
-body { 
-    min-height: 50vh; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-    justify-content: center; 
-    background: hsl(0, 0%, 100%); 
-    font-family: "Poppins", sans-serif; 
-    background-image: url('pierwsze.jpg');
-    background-size: cover; 
-    background-position: center; 
-} 
-  
-h1 { 
-    font-size: xx-large; 
-    padding: 2%; 
-} 
-  
-.root { 
-    background: rgb(60, 125, 60); 
-    margin: 0 1rem; 
-    padding: rem; 
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
-    width: 50rem; 
-    border-radius: 0.5rem; 
-} 
-  
-.card { 
-    margin: 5%; 
-    text-align: centre; 
-    display: flex; 
-    flex-wrap: wrap; 
-} 
-  
-.card-item { 
-    color: white; 
-    height: 100px; 
-    font-size: larger; 
-    margin: 2%; 
-    padding: 4%; 
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
-    width: 28%; 
-    background: rgb(2, 0, 36); 
-    background: linear-gradient(120deg, rgb(0, 37, 61) 0%,  
-                rgba(45, 128, 97, 0.33657212885154064) 35%, 
-                  rgba(0, 212, 255, 1) 100%); 
-} 
-  
-#count { 
-    font-size: xx-large; 
-    color: antiquewhite; 
-} 
-  
-p { 
-    font-size: x-large; 
-    font-weight: bolder; 
-}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
 
+  .card {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #ddd;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .connected {
+    background-color: #6ed56d;
+  }
+
+  .incorrect {
+    background-color: #ff6666;
+  }
