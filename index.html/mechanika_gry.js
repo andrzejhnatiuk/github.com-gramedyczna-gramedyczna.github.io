@@ -30,9 +30,7 @@ function shuffleList(List) {
   
 list = shuffleList(list); 
   
-function checkPair(a, b) {
-	return pairs.some(([a2, b2]) => (a2 == a && b2 == b) || (a2 == b && b2 == a));
-}
+
 
 // Toggle function to handle moves 
 let toggle = (text) => { 
@@ -85,3 +83,7 @@ function createCard(e) {
   
 // Load all card items 
 list.map((e, i) => createCard(e, i)); 
+
+function checkPair(a, b) {
+	return pairs.some(([a2, b2]) => (a2 == a && b2 == b) || (a2 == b && b2 == a));
+}
