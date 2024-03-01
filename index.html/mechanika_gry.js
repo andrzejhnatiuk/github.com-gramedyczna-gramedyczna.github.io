@@ -7,6 +7,9 @@ let list = [
 	['Izoniazyd', 'Pirydoksyna'],
 ];
 
+function checkPair(a, b) {
+	return list.some(([a2, b2]) => (a2 == a && b2 == b) || (a2 == b && b2 == a));
+}
 
 let match = ""; 
 let click = 0; 
@@ -84,6 +87,3 @@ function createCard(e) {
 // Load all card items 
 list.map((e, i) => createCard(e, i)); 
 
-function checkPair(a, b) {
-	return list.some(([a2, b2]) => (a2 == a && b2 == b) || (a2 == b && b2 == a));
-}
