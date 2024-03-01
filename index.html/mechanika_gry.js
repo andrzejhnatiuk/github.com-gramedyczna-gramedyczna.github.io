@@ -3,7 +3,18 @@ const pairs = [
     { word: 'Beta-blokery', opposite: 'Glukagon' },
     { word: 'Cholinomimetyki', opposite: 'Atropina' },
     { word: 'Cyjanki', opposite: 'Hydroksykobalamina' },
-    { word: 'Dabigatran', opposite: 'Idarucyzumab' }
+    { word: 'Dabigatran', opposite: 'Idarucyzumab' },
+    { word: 'Diazepam', opposite: 'Flumazenil' },
+    { word: 'Glin', opposite: 'Deferoksamina' },
+    { word: 'Heparyna', opposite: 'Siarczan protaminy' },
+    { word: 'Insulina', opposite: 'Glukoza' },
+    { word: 'Izoniazyd', opposite: 'Pirydoksyna' },
+    { word: 'Etanol', opposite: 'Metanol' },
+    { word: 'Nikotyna', opposite: 'Biperyden' },
+    { word: 'Paracetamol', opposite: 'N-acetylocysteina' },
+    { word: 'Żelazo', opposite: 'Deferoksamina' },
+    { word: 'TLPD', opposite: 'Wodorowęglan Sodu' },
+    { word: 'Warfaryna', opposite: 'Wit. K' },
   ];
 
   const gameBoard = document.getElementById('game-board');
