@@ -28,7 +28,7 @@ function shuffleList(List) {
     return List; 
 } 
   
-list = shuffleList(list); 
+list = shuffleList(list);
   
 
 
@@ -85,5 +85,5 @@ function createCard(e) {
 list.map((e, i) => createCard(e, i)); 
 
 function checkPair(a, b) {
-	return pairs.some(([a2, b2]) => (a2 == a && b2 == b) || (a2 == b && b2 == a));
+	return list.some(([a2, b2]) => (a2 == a && b2 == b) || (a2 == b && b2 == a));
 }
