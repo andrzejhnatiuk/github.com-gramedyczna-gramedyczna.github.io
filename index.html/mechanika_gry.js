@@ -1,21 +1,17 @@
-let list = [ 
-    "OPIAT", 
-    "OPIAT", 
-    "NALOKSON", 
-    "NALOKSON", 
-    "BETA-BLOKERY", 
-    "BETA-BLOKERY", 
-    "GLUKAGON", 
-    "GLUKAGON", 
-    "METANOL", 
-    "METANOL", 
-    "ETANOL", 
-    "ETANOL", 
-]; 
-  
+let list = [
+	['Nalokson', 'Opiat'],
+	['Beta-bloker', 'Glukagon'],
+	['Etanol', 'Metanol'],
+    ['Paracetamol', 'N-acetylocysteina'],
+	['Zolpidem', 'Flumazenil'],
+	['Izoniazyd', 'Pirydoksyna'],
+];
+
+
 let match = ""; 
 let click = 0; 
 let count = 0; 
+
 function check() { 
     if (count === 6) 
         window.alert("Twój wynik to :" + click); 
@@ -34,6 +30,10 @@ function shuffleList(List) {
   
 list = shuffleList(list); 
   
+function checkPair(a, b) {
+	return pairs.some(([a2, b2]) => (a2 == a && b2 == b) || (a2 == b && b2 == a));
+}
+
 // Toggle function to handle moves 
 let toggle = (text) => { 
     click = click + 1; 
@@ -84,4 +84,4 @@ function createCard(e) {
 } 
   
 // Load all card items 
-list.map((e, i) => createCard(e, i));
+list.map((e, i) => createCard(e, i)); 
