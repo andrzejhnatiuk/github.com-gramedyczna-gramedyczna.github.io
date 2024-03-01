@@ -1,7 +1,9 @@
 const pairs = [
-    { word: 'Hot', opposite: 'Cold' },
-    { word: 'Big', opposite: 'Small' },
-    { word: 'Long', opposite: 'Short' }
+    { word: 'Buprenofrina', opposite: 'Nalokson' },
+    { word: 'Beta-blokery', opposite: 'Glukagon' },
+    { word: 'Cholinomimetyki', opposite: 'Atropina' },
+    { word: 'Cyjanki', opposite: 'Hydroksykobalamina' },
+    { word: 'Dabigatran', opposite: 'Idarucyzumab' }
   ];
 
   const gameBoard = document.getElementById('game-board');

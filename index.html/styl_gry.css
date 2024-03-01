@@ -9,12 +9,13 @@ body {
 
 
   .card {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 30px;
     margin: 10px;
-    background-color: #ddd;
+    background-color: #a3a9a4;
     display: inline-block;
     cursor: pointer;
+    text-align: center;
   }
 
   .connected {
@@ -23,4 +24,37 @@ body {
 
   .incorrect {
     background-color: #ff6666;
+  }
+
+  #restartButton {
+    padding: 10px 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    background-color: rgb(23, 228, 150);
+    color: rgb(7, 7, 7);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #restartButton:hover {
+    background-color: rgb(242, 220, 22); 
+    transform: scale(1.1); 
+  }
+
+  .centered-button {
+    padding: 10px 20px;
+    margin-top: 100px;
+    font-size: 50px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .centered-button:hover {
+    background-color: red; 
+    transform: scale(1.1); 
   }
