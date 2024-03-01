@@ -6,6 +6,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
+    transform translate (-50,-50);
     border-radius: 4px;
     background-color: #f4511e;
     border: none;
@@ -41,4 +42,10 @@ body{
   .button:hover span:after {
     opacity: 1;
     right: 0;
+  }
+
+  @media (max-width: 600px) {
+    .button{
+        width:100%;
+    }
   }
