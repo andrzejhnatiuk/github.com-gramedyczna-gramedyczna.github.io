@@ -16,6 +16,7 @@ body {
   text-align: center;
 }
 
+
 .centered-button {
   padding: 10px 20px;
   font-size: 50px;
@@ -31,11 +32,21 @@ body {
   transform: scale(1.1); 
 }
 
-@media screen and (max-width: 600px) {
-  .centered-button {
-      padding: 8px 16px; 
-      font-size: 14px; 
-  }
+.centered-button2 {
+  padding: 10px 20px;
+  font-size: 50px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
+.centered-button2:hover {
+  background-color: red; 
+  transform: scale(1.1); 
+}
+
+
   
 
