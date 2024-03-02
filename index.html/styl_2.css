@@ -231,13 +231,13 @@ body {
   @media only screen and (max-width: 800px) {
     .button_div {
         position: fixed;
-        bottom: 0; /* Position the button at the very bottom */
+        top: 0; /* Position the button at the very bottom */
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
     }
     .centered-button {
-        font-size: 20px;
+        font-size: 10px;
         opacity: 0.7; /* Set the opacity level */
     }
 }
