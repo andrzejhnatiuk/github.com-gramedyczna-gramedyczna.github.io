@@ -228,7 +228,7 @@ body {
   }
 
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
     .button_div {
         position: fixed;
         bottom: 0; /* Position the button at the very bottom */
@@ -236,6 +236,7 @@ body {
         transform: translateX(-50%);
         text-align: center;
         z-index: 9999; /* Ensure the button is on top of other content */
+        padding-top: 90px;
     }
     .centered-button {
         padding: 5px 10px;
