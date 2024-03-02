@@ -68,6 +68,63 @@ const wordList = [
     {
         word: "streptomycyna",
         hint: "PIERWSZY antybiotyk aminoglikozydowy"
+    },
+    {
+        word: "neomycyna",
+        hint: "Głównie zakażenia skóry, aparatu ochronnego oka, uszu"
+    },
+    {
+        word: "gentamycyna",
+        hint: "Pozostaje lekiem Z WYBORU  w leczeniu ciężkich zakażeń szpitalnych"
+    },
+    {
+        word: "amikacyna",
+        hint: "Bardzo przydatna w terapii zakażeń wywoływanych przez SZCZEPY OPORNE na inne aminoglikozydy"
+    },
+    {
+        word: "doksycyklina ",
+        hint: "Jest wydalana z żółcią, dlatego można ją stosować u chorych z niewydolnością nerek"
+    },
+    {
+        word: "chloramfenikol",
+        hint: "LIPOFILNY - dobrze przenika do OUN"
+    },
+    {
+        word: "klindamycyna",
+        hint: "Rezerwowy w zakażeniach wywołanych przez beztlenowce oraz gronkowce"
+    },
+    {
+        word: "linezolid",
+        hint: "Należy kontrolować ciśnienie krwi i morfologię"
+    },
+    {
+        word: "mupirocyna",
+        hint: "Do stosowania MIEJSCOWEGO"
+    },
+    {
+        word: "metronidazol",
+        hint: "Może wystąpić charakterystyczny METALICZNY smak w ustach"
+    },
+    {
+        word: "nifuroksazydyn",
+        hint: "Działa wyłącznie w świetle przewodu pokarmowego"
+    },
+    {
+        word: "norfloksacyna",
+        hint: "Stosowane głownie w zakażeniach dróg moczowych"
+    },
+    {
+        word: "cyprofloksacyna",
+        hint: "Obejmuje dodatkowo bakterie z rodzaju Pseudomonas"
+    },
+    {
+        word: "lewofloksacyna",
+        hint: "Działa SILNIEJ na drobnoustroje Gram +"
+    },
+    {
+        word: "moksyfloksacyna",
+        hint: "Przeciw bakteriom WEWNĄTRZKOMÓRKOWYM"
     }
+
     
 ];
