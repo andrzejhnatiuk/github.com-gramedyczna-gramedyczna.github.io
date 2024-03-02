@@ -124,7 +124,30 @@ const wordList = [
     {
         word: "moksyfloksacyna",
         hint: "Przeciw bakteriom WEWNĄTRZKOMÓRKOWYM"
+    },
+    {
+        word: "sulfametoksazol",
+        hint: "Trafi do MOCZU w 30 minut od podania"
+    },
+    {
+        word: "trimetoprim",
+        hint: "Można stosować jedynie przy niepowikłanychzakażeniach dróg moczowych"
+    },
+    {
+        word: "kotrimoksazol",
+        hint: "Lek z wyboru przy Stenotrophomonas maltophilia"
+    },
+    {
+        word: "daptomycyna",
+        hint: "Wytwarza kanał potasowy w błonie komórkowej bakterii"
+    },
+    {
+        word: "tyrotrycyna",
+        hint: "Może wywoływać HEMOLIZĘ "
+    },
+    {
+        word: "bacytracyna",
+        hint: "Wskazania do jej stosowania to zakażenia skóry i błon śluzowych"
     }
-
-    
+     
 ];
