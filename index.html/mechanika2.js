@@ -82,7 +82,7 @@ const wordList = [
         hint: "Bardzo przydatna w terapii zakażeń wywoływanych przez SZCZEPY OPORNE na inne aminoglikozydy"
     },
     {
-        word: "doksycyklina ",
+        word: "doksycyklina",
         hint: "Jest wydalana z żółcią, dlatego można ją stosować u chorych z niewydolnością nerek"
     },
     {
