@@ -131,7 +131,7 @@ const wordList = [
     },
     {
         word: "trimetoprim",
-        hint: "Można stosować jedynie przy niepowikłanychzakażeniach dróg moczowych"
+        hint: "Można stosować jedynie przy niepowikłanych zakażeniach dróg moczowych"
     },
     {
         word: "kotrimoksazol",
